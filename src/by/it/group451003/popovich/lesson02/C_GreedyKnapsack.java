@@ -67,17 +67,14 @@ public class C_GreedyKnapsack {
             if (remainingCapacity == 0) break;
 
             if (item.weight <= remainingCapacity) {
-                // Берем предмет целиком
                 result += item.cost;
                 remainingCapacity -= item.weight;
             } else {
-                // Берем часть предмета
                 double fraction = (double) remainingCapacity / item.weight;
                 result += item.cost * fraction;
                 remainingCapacity = 0;
             }
         }
-
 
         System.out.printf("Удалось собрать рюкзак на сумму %f\n", result);
         return result;

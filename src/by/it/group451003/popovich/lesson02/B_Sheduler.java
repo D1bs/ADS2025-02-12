@@ -44,7 +44,6 @@ public class B_Sheduler {
 
         int currentEnd = from;
         for (Event event : events) {
-            // Проверяем, что событие в интервале [from, to] и не пересекается с предыдущими
             if (event.start >= from && event.stop <= to && event.start >= currentEnd) {
                 result.add(event);
                 currentEnd = event.stop;
