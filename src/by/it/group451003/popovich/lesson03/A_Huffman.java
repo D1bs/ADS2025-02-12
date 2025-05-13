@@ -88,9 +88,11 @@ public class A_Huffman {
 
         //4. последний из родителей будет корнем этого дерева
         //это будет последний и единственный элемент оставшийся в очереди priorityQueue.
+        //генерация кодов
         Node head = priorityQueue.poll();
         head.fillCodes("");
         StringBuilder sb = new StringBuilder();
+        //кодируем строку
         for (int i = 0; i < s.length(); i++){
             sb.append(codes.get(s.charAt(i)));
         }
